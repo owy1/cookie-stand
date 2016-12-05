@@ -8,32 +8,33 @@
 
 <script>
 var Alki = {
-  minCustperDay = 2;
-  maxCustperDay = 16;
-  avgCookieEaCust = 4.6;
+  minCustperDay : 2,
+  maxCustperDay : 16,
+  avgCookieEaCust : 4.6,
 };
 
-Alki.prototype.generateRandom = function(min,max) {
+//generate random number with min and max
+Alki.generateRandom = function(min,max) {
   return Math.floor(Math.random() * (max-min+1)) + min;
 }
 
-Alki.prototype.soldHourly = [];
-Alki.prototype.cookieSoldEaHr = function() {
-  var cookiePerHr, custPerHr;
+console.log(Alki.generateRandom(Alki.minCustperDay,Alki.maxCustperDay), Alki.avgCookieEaCust);
 
-
-  for (var i=0,i<15,i++) {
-  cookiePerHr = Math.round(this.generateRandom(minCustperDay,maxCustperDay) * this.avgCookieEaCust);
-  Alki.prototype.soldHourly.push(cookiePerHr);
-}
+Alki.soldHourly = [];
 var cookieTot = 0;
-    for (var i=0;i<15;i++) {
-      cookieTot += this.cookiePerHr();
-    }
-    return cookieTot;
+
+Alki.cookieSoldEaHr = function() {
+  for (var i=0;i<15;i++) {
+  var cookiePerHr = Math.round(Alki.generateRandom(Alki.minCustperDay,Alki.maxCustperDay) * Alki.avgCookieEaCust);
+  cookieTot += cookiePerHr;
+  Alki.soldHourly.push(cookiePerHr);
 }
 
-console.log(Alki.prototype.cookieTot);
+}
+
+Alki.cookieSoldEaHr();
+console.log(Alki.soldHourly);
+console.log('total cookies '+cookieTot);
 
 </script>
 
