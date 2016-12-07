@@ -8,7 +8,7 @@ var storeForm = document.getElementById('inputForm');
 
 // This function is the event handler for input form
 function handleStoreInput(event) {
-
+  console.log('handleStoreInput event')
   event.preventDefault(); //gotta have it for this purpose. prevents page reload on a 'submit' event
 
   var a=event.target.store_name.value;
@@ -16,21 +16,27 @@ function handleStoreInput(event) {
   var c=event.target.max_customer.value;
   var d=event.target.avg_cookieSold.value;
 
-function validateForm() {
-
   if (!a||!b||!c||!d) {
     return alert('Fields cannot be empty!');
   }
-} //close validateForm
 
-  var newStore = new Store(locationName,minCustperDay,maxCustperDay,avgCookieEaCust);
+  if (b<0||c<0||d<0) {
+    event.target.store_name.value = null;
+    event.target.min_customer.value = null;
+    event.target.max_customer.value = null;
+    event.target.avg_cookieSold.value = null;
+    alert('Fields cannot be less than 0!');
+    return;
+  }
 
-  // console.log('Comment by ' + event.target.who.value + ' at ' + Date());
+  var newStore = new Store(a,b,c,d);
 
   event.target.store_name.value = null;
   event.target.min_customer.value = null;
   event.target.max_customer.value = null;
   event.target.avg_cookieSold.value = null;
+
+createTable();
 
 };
 
@@ -38,10 +44,10 @@ function handleStoreRemove(event) {
 
   alert('work in progress');
 
-};
+};//close handleStoreInput event
 
 storeForm.addEventListener('submit',handleStoreInput);
-// storeForm.addEventListener('click',handleStoreRemove);
+// storeForm.addEventListener('submit',handleStoreRemove);
 
 
 function Store(locationName,minCustperDay,maxCustperDay,avgCookieEaCust){
@@ -107,11 +113,18 @@ for (var n = 0; n<storeName.length;n++) {
 }
 
 function createTable() {
+
   hours.unshift('');
   hours.push('Daily Location Total');
   cookieEaHrTot.unshift('Total');
   cookieEaHrTot.push(cookieTOT);
   var locationTbl = document.getElementById('Location');
+
+  // clear table for each render draw
+  while (locationTbl.firstChild) {
+    locationTbl.removeChild(locationTbl.firstChild);
+  }
+
   var locationCap = document.getElementById('Location').createCaption();
     locationCap.innerHTML = "<b>Table 1 Cookies Needed by Location Each Day</b>";
   var trEl = document.createElement('tr');
@@ -144,4 +157,4 @@ function createTable() {
   }
 } //end of createTable object
 
-createTable();
+// createTable();
