@@ -2,19 +2,40 @@
 <html>
 	<head>
 		<title>lab6_cookie stand</title>
-			<link href="styleConstru.css" rel="stylesheet"/>
+			<link href="styleEvent.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<div id="header">
 			<br />
-			<p id="name">Table 1 Cookies Needed by Location Each Day</p>
+			<p id="name"></p>
     <div class="container">
     <div class="box">
       <h4></h4>
+			<form id="inputForm">
+    <fieldset>
+      <legend></legend>
+
+      <label for="store_name">Store Name</label>
+      <input name="store_name" type="text" />
+
+      <label for="min_customer">Min Customer </label>
+      <input name="min_customer" type="number"  />
+
+			<label for="max_customer">Max Customer </label>
+			<input name="max_customer" type="number"  />
+
+			<label for="avg_cookieSold">Cookie per </label>
+			<input name="avg_cookieSold" type="number"  />
+
+      <button type="submit">Add Store</button>
+			<button type="click">Delete Store</button>
+    </fieldset>
+  </form>
+
         <table id="Location"></table>
 
 		</div><!--close box div-->
 		</div> <!--close container div-->
-		<script src="appConstru.js"></script>
+		<script src="appEvent.js"></script>
 	</body>
 </html>

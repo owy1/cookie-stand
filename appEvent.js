@@ -4,6 +4,46 @@ var hours = ['6:00am ','7:00am ','8:00am ','9:00am ','10:00am ','11:00am ','12:0
 
 var storeName = [];
 
+var storeForm = document.getElementById('inputForm');
+
+// This function is the event handler for input form
+function handleStoreInput(event) {
+
+  event.preventDefault(); //gotta have it for this purpose. prevents page reload on a 'submit' event
+
+  var a=event.target.store_name.value;
+  var b=event.target.min_customer.value;
+  var c=event.target.max_customer.value;
+  var d=event.target.avg_cookieSold.value;
+
+function validateForm() {
+
+  if (!a||!b||!c||!d) {
+    return alert('Fields cannot be empty!');
+  }
+} //close validateForm
+
+  var newStore = new Store(locationName,minCustperDay,maxCustperDay,avgCookieEaCust);
+
+  // console.log('Comment by ' + event.target.who.value + ' at ' + Date());
+
+  event.target.store_name.value = null;
+  event.target.min_customer.value = null;
+  event.target.max_customer.value = null;
+  event.target.avg_cookieSold.value = null;
+
+};
+
+function handleStoreRemove(event) {
+
+  alert('work in progress');
+
+};
+
+storeForm.addEventListener('submit',handleStoreInput);
+// storeForm.addEventListener('click',handleStoreRemove);
+
+
 function Store(locationName,minCustperDay,maxCustperDay,avgCookieEaCust){
   this.locationName = locationName;
   this.minCustperDay = minCustperDay;
@@ -72,7 +112,8 @@ function createTable() {
   cookieEaHrTot.unshift('Total');
   cookieEaHrTot.push(cookieTOT);
   var locationTbl = document.getElementById('Location');
-
+  var locationCap = document.getElementById('Location').createCaption();
+    locationCap.innerHTML = "<b>Table 1 Cookies Needed by Location Each Day</b>";
   var trEl = document.createElement('tr');
   locationTbl.appendChild(trEl);
   for (var i = 0; i<hours.length;i++) {
