@@ -25,7 +25,7 @@ var Alki = {
   },
 
   render: function() {
-    var shopList = document.getElementById('alki');
+    var shopList = document.getElementById('Alki');
 
     for (var i = 0; i<hours.length;i++) {
       var liEl = document.createElement('li');
@@ -65,7 +65,7 @@ var SeaTacAir = {
     }
   },
   render: function() {
-    var shopList = document.getElementById('seatac_airport');
+    var shopList = document.getElementById('SeaTac Airport');
 
     for (var i = 0; i<hours.length;i++) {
       var liEl = document.createElement('li');
@@ -105,7 +105,7 @@ var FirstPike = {
   },
 
   render: function() {
-    var shopList = document.getElementById('first_pike');
+    var shopList = document.getElementById('1st and Pike');
 
     for (var i = 0; i<hours.length;i++) {
       var liEl = document.createElement('li');
@@ -145,7 +145,7 @@ var SeaCenter = {
   },
 
   render: function() {
-    var shopList = document.getElementById('seattle_center');
+    var shopList = document.getElementById('Seattle Center');
 
     for (var i = 0; i<hours.length;i++) {
       var liEl = document.createElement('li');
@@ -185,7 +185,7 @@ var CapHill = {
   },
 
   render: function() {
-    var shopList = document.getElementById('capital_hill');
+    var shopList = document.getElementById('Capital Hill');
 
     for (var i = 0; i<hours.length;i++) {
       var liEl = document.createElement('li');
