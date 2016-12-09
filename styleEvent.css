@@ -3,7 +3,7 @@
   border-radius: 5px;
   position: relative;
   height:80px;
-  width:98%%;
+  width:98%;
   background-color: lightblue;
   margin-top: -20px;
 }
@@ -16,20 +16,20 @@
   font-weight:bold;
 }
 
-.container {
+/*.container {
   border-radius:5px;
-  width:1200px;
-}
+  width:100%;
+}*/
 
 .box {
 	border-radius:5px;
-	float:left;
-	height: 1200px;
-	width: 98%;
+	float:relative;
+	height: 1000px;
+	width: 100%;
 	background-color: aliceblue;
-  /*margin-bottom: -20px;
-  margin-top: 5px;
-  margin-left: 20px;*/
+  margin-top: 60px;
+  margin-bottom: -20px;
+  margin-left: 1px;
 }
 
 h4 {
@@ -43,6 +43,9 @@ h4 {
 table {
   border-spacing: 0px;
   width:100%
+}
+
+table.Location {
   margin-left:auto;
   margin-right:auto;
 }
@@ -60,6 +63,7 @@ td {
   border-top: 1px solid #e5e5e5;
   border-bottom: : 1px solid #f1f8fe;
   border-right: 1px solid #e5e5e5;
+  height:20px;
 }
 
 th {
