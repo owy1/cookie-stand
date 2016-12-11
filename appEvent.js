@@ -5,7 +5,7 @@ var hours = ['6:00am ','7:00am ','8:00am ','9:00am ','10:00am ','11:00am ','12:0
 var allShops = [];
 var storeForm = document.getElementById('inputForm');
 var locationTbl = document.getElementById('Location');
-var deleteButton = document.getElementById('delete_button');
+
 
 function Store(locationName,minCustperDay,maxCustperDay,avgCookieEaCust){
   this.locationName = locationName;
@@ -176,19 +176,12 @@ function createTable() {
       tdElHr.textContent = allShops[j].cookieSoldEaHr[k];
       trElStore.appendChild(tdElHr);
     } //end array_k
-    var delButton = document.createElement('input');
-    delButton.setAttribute('type','button');
-    delButton.attachEvent('onclick',alert("work in progress"));
+
+    var delButton = document.createElement("BUTTON");
+    // delButton.setAttribute('type','button');
+    // delButton.attachEvent('onclick',alert("work in progress"));
     trElStore.appendChild(delButton);
   } //end array_j
-
-    // for (var j = 0; j < allShops.length; j++) {
-    // var trElDelete = document.createElement('tr');
-    // deleteButton.appendChild(trElDelete);
-    // var delButton = document.createElement('input');
-    // // delButton.setAttribute('type','button');
-    // delButton.attachEvent('onclick',alert("work in progress"));
-    // trElDelete.appendChild(delButton);
 
   createTblFooter();
 
