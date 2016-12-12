@@ -1,21 +1,37 @@
+*{
+    background-color: #FF999D;
+}
+
 #header {
   z-index: 1;
   border-radius: 5px;
   position: relative;
   width:98%;
-  background-color: lightblue;
+  background-color: #66B8FF;
   margin-top: -20px;
 }
 
-#container {
+.container {
   border-radius: 5px;
   position: relative;
   width:98%;
-  background-color: #FF999D;
+  clear: both;
+  /*background-color: #66B8FF;*/
 }
 
-ul {
-  width: 670px;
+#box1 {
+  float: left;
+  width:78%;
+}
+
+#box2 {
+  float: right;
+  width:18%;
+}
+
+#nav ul {
+
+  width: 98%;
   padding: 15px;
   margin: 0px auto 0px auto;
   border-top: 2px solid #000;
@@ -23,23 +39,20 @@ ul {
   text-align: center;
 }
 
-li {
+#nav li {
   display: inline;
   margin: 0px 3px;
+}
+
+#hours ul {
+  display: block;
+  list-style-type: none;
 }
 
 h1{
   position:relative;
   text-align: center;
   font-family: Verdana, sans-serif;
-}
-
-h5{
-  text-align: center;
-  font-style: italic;
-  font-size: 150%;
-  font-family: Verdana, sans-serif;
-  margin:5px;
 }
 
 a {
@@ -58,6 +71,7 @@ a:hover, a.on {
   margin: 0px auto 0px auto;
   text-align: center;
   border: 1px solid #D6D6D6;
+  /*background-color: #66B8FF;*/
 }
 
 .imgContainer {
@@ -66,8 +80,8 @@ a:hover, a.on {
 }
 
 .image123 {
-  left:50%;
-  margin-left:15%;
+  clear:both;
+  margin-left:20%;
 }
 
 .txt {
@@ -77,9 +91,16 @@ a:hover, a.on {
   width: 700px;
   margin: 0px auto 0px auto;
   font-weight: normal;
-  background-color: #FF999D;
   border-top: 1px solid #000;
   border-bottom: 2px solid #000;
+}
+
+h5{
+  text-align: center;
+  font-style: italic;
+  font-size: 150%;
+  font-family: Verdana, sans-serif;
+  margin:5px;
 }
 
 .txt2 {
@@ -96,4 +117,8 @@ p {
   color: #665544;
   width:90%;
   display: inline-block;
+}
+a:link {
+  color: #FF6666;
+  text-decoration: underline;
 }
