@@ -6,7 +6,6 @@ var allShops = [];
 var storeForm = document.getElementById('inputForm');
 var locationTbl = document.getElementById('Location');
 
-
 function Store(locationName,minCustperDay,maxCustperDay,avgCookieEaCust){
   this.locationName = locationName;
   this.minCustperDay = minCustperDay;
@@ -47,9 +46,9 @@ console.log(event.target);
   var c = event.target.max_customer.value;
   var d = event.target.avg_cookieSold.value;
 
-  // // if (!a || !b || !c || !d) {
-  //   return alert('Fields cannot be empty!');
-  // }
+  if (!a || !b || !c || !d) {
+    return alert('Fields cannot be empty!');
+  }
 
   if (b < 0|| c < 0 || d < 0) {
     event.target.store_name.value = null;
@@ -70,6 +69,7 @@ console.log(event.target);
 createTable();
 
 };//end handleStoreInput
+
 
 function handleStoreRemove(event) {
   event.preventDefault(); //gotta have it for this purpose. prevents page reload on a 'submit' event
@@ -178,8 +178,9 @@ function createTable() {
     } //end array_k
 
     var delButton = document.createElement("BUTTON");
-    // delButton.setAttribute('type','button');
-    // delButton.attachEvent('onclick',alert("work in progress"));
+    var t = document.createTextNode("delete");
+    delButton.setAttribute('id',allShops[j].locationName);
+    delButton.appendChild(t);
     trElStore.appendChild(delButton);
   } //end array_j
 
@@ -187,7 +188,7 @@ function createTable() {
 
 } //end createTable
 
-///////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 
 new Store('1st and Pike',23,65,6.3);
 new Store('SeaTac Airport',3,24,1.2);
@@ -198,4 +199,6 @@ new Store('Alki',2,16,4.6);
 createTable();
 
 storeForm.addEventListener('submit',handleStoreInput);
+var b = document.getElementById();
+b.addEvent('click', alert("work in progress"));
 // storeForm.addEventListener('submit',handleStoreRemove);

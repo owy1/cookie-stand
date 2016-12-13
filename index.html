@@ -20,7 +20,7 @@
 				</ul>
 			</div><!--close nav div-->
 		</div><!--close header div-->
-	<div class="container">
+	<section id="container">
 		<div class="txt">
 			<h5>Welcome</h5>
 		</div> <!--close txt div-->
@@ -34,7 +34,7 @@
 			<div class="imgContainer">
 					<img src="images/frosted-cookie.jpg" width="220" height="150" >
 			</div>
-		</section><!--close image123 section-->
+
 		<section id="box1">
 		<div class = "txt2">
 			<p><img src="images/family.jpg" width="150" height="120" style="float:left;margin:10px;"> </br>Pat and her family (yes, the kids too) started their cookies mail order gift service from their kitchen, specializing in truly homemade, fresh baked, hand-packaged cookies. All of our cookies are made from scratch, with the finest ingredients available to us from our local farms.</p>
@@ -50,22 +50,52 @@
 	</section> <!--close box1 section-->
 	<section id="box2">
 		<div id="hours">
-			<ul>
-				<li>Address</li>
-				<li>123 Cookie Ave</br>Seattle WA 98103</li>
-			</br>
-				<li>Hours</li>
-				<li>Mon&nbsp 9:00 &#150 5:00 pm</li>
-				<li>Tue&nbsp&nbsp 9:00 &#150 5:00 pm</li>
-				<li>Wed&nbsp 9:00 &#150 5:00 pm</li>
-				<li>Thu&nbsp&nbsp 9:00 &#150 5:00 pm</li>
-				<li>Fri&nbsp&nbsp&nbsp&nbsp  9:00 &#150 5:00 pm</li>
-				<li>Sat&nbsp&nbsp&nbsp  Closed</li>
-				<li>Sun&nbsp&nbsp Closed</li>
-			</ul>
+			<table>
+				<tr>
+					<th></th>
+				<th scope="col">Address</th>
+			</tr>
+
+			<tr>
+				<td colspan="2">123 Cookie Ave</br>Seattle WA 98103</td>
+			</tr>
+			<tr>
+				<th></th>
+			<th scope="col">Hours</th>
+			</tr>
+			<tr>
+			<th scope="row">Mon</th>
+			<td>9:00 &#150 5:00 pm</td>
+			</tr>
+			<tr>
+			<th scope="row">Tue</th>
+			<td>9:00 &#150 5:00 pm</td>
+			</tr>
+			<tr>
+			<th scope="row">Wed</th>
+			<td>9:00 &#150 5:00 pm</td>
+			</tr>
+			<tr>
+			<th scope="row">Thu</th>
+			<td>9:00 &#150 5:00 pm</td>
+			</tr>
+			<tr>
+			<th scope="row">Fri</th>
+			<td>9:00 &#150 5:00 pm</td>
+			</tr>
+			<tr>
+			<th scope="row">Sat</th>
+			<td>Closed</td>
+			</tr>
+			<tr>
+			<th scope="row">Sun</th>
+			<td>Closed</td>
+			</tr>
+			</table>
 		</div><!--close hours div-->
-	</section><!--close box2 section-->
-	</div><!--close container div-->
+	</section><!--close box2 section -->
+	</section><!--close image123 section-->
+</section><!--close container div-->
 		<!-- <script src="appEvent.js"></script> -->
 	</body>
 </html>
