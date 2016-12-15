@@ -1,5 +1,4 @@
 
-
 #header {
   z-index: 1;
   border-radius: 5px;
@@ -9,9 +8,9 @@
   margin-top: -20px;
 }
 
-/** {
+body {
     background-color: #FF999D;
-}*/
+}
 
 #container {
   border-radius: 5px;
@@ -20,6 +19,7 @@
   clear: both;
   display: block;
   background-color: #FF999D;
+  margin-left: 40px;
 }
 
 #box1 {
