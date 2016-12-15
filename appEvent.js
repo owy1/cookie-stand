@@ -199,6 +199,9 @@ new Store('Alki',2,16,4.6);
 createTable();
 
 storeForm.addEventListener('submit',handleStoreInput);
-var b = document.getElementById();
-b.addEvent('click', alert("work in progress"));
+function nameMatch(name) {
+  var b = document.getElementById();
+  b.addEvent('click', alert("work in progress"));
+}
+nameMatch();
 // storeForm.addEventListener('submit',handleStoreRemove);
