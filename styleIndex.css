@@ -3,7 +3,7 @@
   z-index: 1;
   border-radius: 5px;
   position: relative;
-  width:98%;
+  width:100%;
   background-color: #66B8FF;
   margin-top: -20px;
 }
@@ -37,7 +37,7 @@ body {
   padding: 15px;
   margin: 0px auto 0px auto;
   border-top: 2px solid #000;
-  border-bottom: 1px solid #000;
+  border-bottom: 3px solid #000;
   text-align: center;
 }
 
@@ -92,8 +92,8 @@ a:hover, a.on {
   width: 98%;
   margin: 0px auto 0px auto;
   font-weight: normal;
-  border-top: 1px solid #000;
-  border-bottom: 2px solid #000;
+  /*border-top: 1px solid #000;*/
+  /*border-bottom: 2px solid #000;*/
 }
 
 h5{
